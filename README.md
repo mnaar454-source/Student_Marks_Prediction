@@ -1,41 +1,78 @@
-# Student Exam / Marks Prediction — Machine Learning Project
+# 🎓 Student Marks Prediction
 
-B.Tech CSE (AI & ML) project based on the uploaded Kaggle `exams.csv` dataset.
+> An end-to-end Machine Learning project for predicting students' Mathematics scores from demographic and academic performance data, with an interactive Streamlit web application.
 
-## Dataset
-The included `data/exams.csv` is the uploaded dataset. No synthetic/fake data is generated.
+[![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.7.2-orange?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![Plotly](https://img.shields.io/badge/Plotly-Visualization-3F4F75?logo=plotly&logoColor=white)](https://plotly.com/)
 
-The dataset contains:
-- `gender`
-- `race/ethnicity`
-- `parental level of education`
-- `lunch`
-- `test preparation course`
-- `math score`
-- `reading score`
-- `writing score`
+---
 
-## Target
-The default target is `math score`. The features are all other columns.
+## 🚀 Live Demo
 
-If your Kaggle dataset is different, change `DATA_PATH` and `TARGET_COLUMN` in the notebook. You can also set `FEATURE_COLUMNS` explicitly.
+### 🌐 Streamlit Application
+https://studentmarksprediction-tfdrm6iwem2fcekwhk6jbr.streamlit.app/
 
-## Workflow
-Kaggle CSV → inspection → cleaning → EDA → train/test split → leakage-safe preprocessing → model comparison → evaluation → Joblib save/load → prediction → Streamlit GUI
+The deployed application provides an interactive interface for entering student information and generating a Mathematics score prediction using the trained Machine Learning model.
 
-## Run
-```bash
-pip install -r requirements.txt
-jupyter notebook Student_Marks_Prediction.ipynb
-```
+---
 
-Run all notebook cells. The trained package is saved to:
-`models/student_marks_predictor.joblib`
+## 📌 Project Overview
 
-Then:
-```bash
-streamlit run app.py
-```
+**Student Marks Prediction** is an end-to-end Machine Learning project developed as part of a **B.Tech CSE (AI & ML)** academic project.
 
-## Important
-Model metrics are produced from the actual dataset when the notebook is executed. Do not copy example metrics from documentation as final project results.
+The project uses the Kaggle `exams.csv` dataset to build a regression-based prediction system for estimating a student's **Mathematics score** from demographic information and other academic scores.
+
+The complete workflow covers:
+
+- Dataset loading and inspection
+- Data cleaning
+- Exploratory Data Analysis (EDA)
+- Feature selection
+- Train/test splitting
+- Leakage-safe preprocessing
+- Machine Learning model training
+- Model comparison
+- Model evaluation
+- Model serialization using Joblib
+- Student score prediction
+- Interactive Streamlit deployment
+
+---
+
+## 🎯 Objective
+
+The main objective of this project is to develop a reusable Machine Learning pipeline that can:
+
+1. Process real student examination data.
+2. Prepare numerical and categorical features for Machine Learning.
+3. Train and compare regression models.
+4. Evaluate model performance using standard regression metrics.
+5. Save the trained model for reuse.
+6. Provide predictions through an interactive web application.
+
+---
+
+## 📊 Dataset
+
+The project uses the Kaggle `exams.csv` dataset.
+
+The dataset contains the following attributes:
+
+| Feature | Description |
+|---|---|
+| `gender` | Student gender |
+| `race/ethnicity` | Student race/ethnicity group |
+| `parental level of education` | Parent/guardian education level |
+| `lunch` | Lunch program/type |
+| `test preparation course` | Test preparation course status |
+| `math score` | Mathematics examination score |
+| `reading score` | Reading examination score |
+| `writing score` | Writing examination score |
+
+### Target Variable
+
+```text
+math score
